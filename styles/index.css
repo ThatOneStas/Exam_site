@@ -2,21 +2,142 @@ body {
     margin: 0px;
 }
 
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
 .main {
-    height: 400px;
-}
-footer {
-    height: 100px;
+    height: 600px;
+    width: 100%;
+    padding: 0px 5% 0px 0px;
+    box-sizing: border-box;
+    display: flex;
+    background: rgb(217,217,217);
+    background: linear-gradient(90deg, rgb(215, 215, 215) 0%, rgba(255,255,255,1) 50%, rgb(215, 215, 215) 100%);
 }
 
-.scene {
-    border: 1px solid #CCC;
-    margin: 40px 0;
+/* ------------------------------ */
+
+.main__box {
+    width: 50%;
+    height: 100%;
+    padding: 40px 5% 0px 5%;
+    box-sizing: border-box;
+}
+
+.main__box_1,.main__box_2,.main__box_3,.main__box_4,.main__box_5,.main__box_6 {
+    width: 577px;
+    height: 560px;
     position: relative;
-    width: 210px;
-    height: 140px;
-    margin: 40px auto;
+}
+
+.main__box_n_title {
+    font-family: 'Montserrat';
+    color: black;
+    margin: 0px 0px 0px 0px;
+    letter-spacing: 0.1em;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.main__box_n_sub_title {
+    font-family: 'Montserrat';
+    color: black;
+    margin: 0px 0px 30px 0px;
+    letter-spacing: 0.1em;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.main__box_n_text {
+    width: 500px;
+    font-family: 'Roboto';
+    color: black;
+    margin: 0px 0px 30px 0px;
+    letter-spacing: 0.1em;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.main__box_n_link {
+    font-family: 'Montserrat';
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0px 0px 0px 0px;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    position: absolute;
+    bottom: 100px;
+    right: 0px;
+    transition: 0.2s;
+}
+
+.main__box_n_link:hover {
+    color: rgba(0, 160, 165, 0.8);
+    transition: 0.2s;
+}
+
+.main__box_n_bg_img {
+    width: 400;
+    height: 200;
+    rotate: -20deg;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
+
+/* ------------------------------ */
+
+.main__carousel {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__carousel_scene {
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    position: relative;
+    width: 290px;
+    height: 190px;
     perspective: 1000px;
+}
+
+.main__carousel_btns {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__carousel_btns_box {
+    position: relative;
+    margin-bottom: 30px;
+    width: 120px;
+}
+
+.main__carousel_btns_box .previous-button {
+    position: absolute;
+    left: 0px;
+    padding: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+.main__carousel_btns_box .next-button {
+    position: absolute;
+    right: 0px;
+    padding: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+.main__carousel_btns_text {
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    letter-spacing: 0.4em;
+    opacity: 0.4;
 }
 
 .carousel {
@@ -31,25 +152,28 @@ footer {
 .carousel__cell {
     font-family: 'Montserrat';
     position: absolute;
-    width: 200px;
-    height: 120px;
+    width: 270px;
+    height: 170px;
     left: 10px;
     top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     line-height: 116px;
     font-size: 80px;
     font-weight: bold;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     background: rgb(20,69,82);
     background: linear-gradient(90deg, rgba(20,69,82,0.7) 0%, rgba(33,47,69,0.7) 30%, rgba(62,31,71,0.7) 70%, rgba(39,38,64,0.7) 100%)
 }
-.carousel__cell:nth-child(1) { transform: rotateY(0deg) translateZ(208px); }
-.carousel__cell:nth-child(2) { transform: rotateY(60deg) translateZ(208px); }
-.carousel__cell:nth-child(3) { transform: rotateY(120deg) translateZ(208px); }
-.carousel__cell:nth-child(4) { transform: rotateY(180deg) translateZ(208px); }
-.carousel__cell:nth-child(5) { transform: rotateY(240deg) translateZ(208px); }
-.carousel__cell:nth-child(6) { transform: rotateY(300deg) translateZ(208px); }
+.carousel__cell:nth-child(1) { transform: rotateY(0deg) translateZ(268px); }
+.carousel__cell:nth-child(2) { transform: rotateY(60deg) translateZ(268px); }
+.carousel__cell:nth-child(3) { transform: rotateY(120deg) translateZ(268px); }
+.carousel__cell:nth-child(4) { transform: rotateY(180deg) translateZ(268px); }
+.carousel__cell:nth-child(5) { transform: rotateY(240deg) translateZ(268px); }
+.carousel__cell:nth-child(6) { transform: rotateY(300deg) translateZ(268px); }
 
 
 /* --------------------------------------------------------------------------- */
@@ -58,9 +182,9 @@ footer {
 .form {
     width: 100%;
     height: 500px;
-    padding: 0px;
+    padding: 0px 0px 0px 0px;
     box-sizing: border-box;
-    position: relative;
+    display: flex;
 }
 
 .form {
@@ -91,18 +215,14 @@ footer {
 .form__box1{
     width: 50%;
     height: 100%;
-    padding: 40px 0px 0px 5%;
+    padding: 40px 5% 0px 5%;
     box-sizing: border-box;
-    position: absolute;
-    left: 0px;
 }
 .form__box2{
     width: 50%;
     height: 100%;
-    padding: 40px 0px 0px 5%;
+    padding: 40px 5% 0px 5%;
     box-sizing: border-box;
-    position: absolute;
-    right: 0px;
     background-color: black;
     background: rgba(0, 0, 0, 0.4);
 }
@@ -149,21 +269,34 @@ footer {
     width: 340px;
     border-radius: 5px;
     border: 0px;
-    transition: 0.2s;
 }
 
-.form__input_submit:hover {
-    cursor: pointer;
-    width: 355px;
-    transition: 0.2s;
-    background-color: rgb(224, 224, 224);
+.form__input_submit {
+    width: 300px;
+    color: #CCC;
+    border: 3px solid #195769;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(30deg, #195769 80%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
+.form__input_submit:hover {
+    background-position: 300%;
+    border-color: #307a8e;
+    color: #307a8e;
+    cursor: pointer;
+}
+
 
 /* --------------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------- */
 
 .footer {
     width: 100%;
+    height: 100px;
     padding: 0px 5% 0px 5%;
     box-sizing: border-box;
     display: flex;
