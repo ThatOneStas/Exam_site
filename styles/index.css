@@ -1,5 +1,93 @@
 body {
     margin: 0px;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.header {
+    width: 100%;
+    height: 100px;
+    padding: 0px 5% 0px 5%;
+    background-color: #272640;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+
+/* ------------------------------ */
+
+.header__logo {
+    font-weight: bold;
+    color: whitesmoke;
+    cursor: default;
+    font-size: 40px;
+    margin: 0px;
+}
+
+
+.header__url {
+    width: 500px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.header__url_a {
+    font-size: 20px;
+    font-weight: 400;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.header__url_a:hover {
+    color: chocolate;
+    transition: 0.1s;
+}
+
+/* ------------------------------ */
+
+.header_icon_box {
+    width: 100px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header_icon {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 9px 6px;
+    border: 1px solid rgb(215, 215, 215, 0.4);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.header_icon:hover {
+    border: 2px solid rgba(0, 160, 165, 0.4);
+    transition: 0.1s;
+}
+
+.header_icon_line {
+    width: 100%;
+    height: 4px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+}
+
+.header_icon:hover .header_icon_line {
+    background-color: rgba(0, 160, 165);
+    transition: 0.1s;
 }
 
 /* --------------------------------------------------------------------------- */
@@ -11,7 +99,7 @@ body {
     padding: 0px 5% 0px 0px;
     box-sizing: border-box;
     display: flex;
-    background: rgb(217,217,217);
+    background: rgb(215,215,215);
     background: linear-gradient(90deg, rgb(215, 215, 215) 0%, rgba(255,255,255,1) 50%, rgb(215, 215, 215) 100%);
 }
 
@@ -121,6 +209,7 @@ body {
     position: absolute;
     left: 0px;
     padding: 7px;
+    cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 3px;
 }
@@ -129,6 +218,7 @@ body {
     position: absolute;
     right: 0px;
     padding: 7px;
+    cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 3px;
 }
@@ -212,19 +302,13 @@ body {
     100%{background-position:90% 0%}
 }
 
+/* ------------------------------ */
+
 .form__box1{
     width: 50%;
     height: 100%;
     padding: 40px 5% 0px 5%;
     box-sizing: border-box;
-}
-.form__box2{
-    width: 50%;
-    height: 100%;
-    padding: 40px 5% 0px 5%;
-    box-sizing: border-box;
-    background-color: black;
-    background: rgba(0, 0, 0, 0.4);
 }
 
 .form__title {
@@ -290,6 +374,16 @@ body {
     cursor: pointer;
 }
 
+/* ------------------------------ */
+
+.form__box2{
+    width: 50%;
+    height: 100%;
+    padding: 40px 5% 0px 5%;
+    box-sizing: border-box;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.4);
+}
 
 /* --------------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------- */
@@ -304,9 +398,12 @@ body {
     font-family: 'Montserrat';
 }
 
+/* ------------------------------ */
+
 .footer__logo {
     font-weight: bold;
     width: 20%;
+    cursor: default;
     font-size: 40px;
     margin: 0px;
 }
