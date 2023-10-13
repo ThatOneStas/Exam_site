@@ -51,7 +51,7 @@ body {
 
 /* ------------------------------ */
 
-.header_icon_box {
+.header__icon_box {
     width: 100px;
     height: 100%;
     position: relative;
@@ -60,7 +60,7 @@ body {
     justify-content: end;
 }
 
-.header_icon {
+.header__icon {
     width: 40px;
     height: 30px;
     display: flex;
@@ -73,21 +73,98 @@ body {
     transition: 0.2s;
 }
 
-.header_icon:hover {
-    border: 2px solid rgba(0, 160, 165, 0.4);
-    transition: 0.1s;
+.header__icon:hover {
+    border: 1px solid rgba(0, 160, 165, 0.4);
 }
 
-.header_icon_line {
+.header__icon_line {
     width: 100%;
     height: 4px;
     background-color: whitesmoke;
     border-radius: 3px;
 }
 
-.header_icon:hover .header_icon_line {
+.header__icon.active {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header__icon.active :nth-child(2) {
+    display: none;
+}
+
+.header__icon.active :nth-child(1) {
+    width: 90%;
+    rotate: -45deg;
+    position: absolute;
+}
+
+.header__icon.active :nth-child(3) {
+    width: 90%;
+    rotate: 45deg;
+    position: absolute;
+}
+
+.header__icon:hover .header__icon_line {
     background-color: rgba(0, 160, 165);
     transition: 0.1s;
+}
+
+/* ------------------------------ */
+
+.header__nav_box {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 100px;
+    z-index: 99;
+    display: flex;
+    justify-content: end;
+    transform: translateX(200vw);
+    transition: 0.2s;
+}
+
+.header__nav_box.active {
+    transform: translateX(0%);
+    right: 0px;
+}
+
+.header__nav {
+    width: 350px;
+    height: 500px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__nav_a {
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: black;
+    transition: 0.2s;
+}
+
+.header__nav_a:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.header__nav_title {
+    margin: 0px;
+    padding: 0px 0px 30px 0px;
+    font-size: 40px;
+    font-weight: 200;
+    color: black;
+    transition: 0.2s;
 }
 
 /* --------------------------------------------------------------------------- */

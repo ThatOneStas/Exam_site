@@ -74,18 +74,24 @@ const changeCarouselTextBox=(n)=>{
 
 
 document.addEventListener("DOMContentLoaded",()=>{
+    const HEADER_ICON = $(".header__icon")
+    HEADER_ICON.on("click",()=>{
+        const ICON_NAV_BOX = $(".header__nav_box")
+        ICON_NAV_BOX.toggleClass("active")
+        HEADER_ICON.toggleClass("active")
+    })
     
-    const PREVBTN = $('.previous-button');
-    PREVBTN.on( 'click', function() {
-        selectedIndex--;
-        rotateCarousel();
+    const PREVBTN = $('.previous-button')
+    PREVBTN.on("click", function() {
+        selectedIndex--
+        rotateCarousel()
         changeCarouselTextBox(-1)
-    });
+    })
 
-    const NEXTBTN = $('.next-button');
-    NEXTBTN.on( 'click', function() {
-        selectedIndex++;
-        rotateCarousel();
+    const NEXTBTN = $('.next-button')
+    NEXTBTN.on("click", function() {
+        selectedIndex++
+        rotateCarousel()
         changeCarouselTextBox(1)
-    });
+    })
 })
