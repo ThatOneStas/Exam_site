@@ -1,7 +1,9 @@
 let carousel = document.querySelector('.carousel');
 let cellCount = 6;
-let currectCell = 1
 let selectedIndex = 0;
+
+let currect_cell = 1
+let currect_company_box = 1
 
 function rotateCarousel() {
 var angle = selectedIndex / cellCount * -360;
@@ -15,14 +17,14 @@ const changeCarouselTextBox=(n)=>{
     const BOX4 = $(".main__box_4")
     const BOX5 = $(".main__box_5")
     const BOX6 = $(".main__box_6")
-    currectCell +=n
-    if(currectCell==7){
-        currectCell=1
+    currect_cell +=n
+    if(currect_cell==7){
+        currect_cell=1
     }
-    else if(currectCell==0){
-        currectCell=6
+    else if(currect_cell==0){
+        currect_cell=6
     }
-    if(currectCell==1){
+    if(currect_cell==1){
         BOX1.css("transform", "translateX(0vw)")
         BOX2.css("transform", "translateX(200vw)")
         BOX3.css("transform", "translateX(200vw)")
@@ -30,7 +32,7 @@ const changeCarouselTextBox=(n)=>{
         BOX5.css("transform", "translateX(200vw)")
         BOX6.css("transform", "translateX(200vw)")
     }
-    else if(currectCell==2){
+    else if(currect_cell==2){
         BOX1.css("transform", "translateX(200vw)")
         BOX2.css("transform", "translateX(0vw)")
         BOX3.css("transform", "translateX(200vw)")
@@ -38,7 +40,7 @@ const changeCarouselTextBox=(n)=>{
         BOX5.css("transform", "translateX(200vw)")
         BOX6.css("transform", "translateX(200vw)")
     }
-    else if(currectCell==3){
+    else if(currect_cell==3){
         BOX1.css("transform", "translateX(200vw)")
         BOX2.css("transform", "translateX(200vw)")
         BOX3.css("transform", "translateX(0vw)")
@@ -46,7 +48,7 @@ const changeCarouselTextBox=(n)=>{
         BOX5.css("transform", "translateX(200vw)")
         BOX6.css("transform", "translateX(200vw)")
     }
-    else if(currectCell==4){
+    else if(currect_cell==4){
         BOX1.css("transform", "translateX(200vw)")
         BOX2.css("transform", "translateX(200vw)")
         BOX3.css("transform", "translateX(200vw)")
@@ -54,7 +56,7 @@ const changeCarouselTextBox=(n)=>{
         BOX5.css("transform", "translateX(200vw)")
         BOX6.css("transform", "translateX(200vw)")
     }
-    else if(currectCell==5){
+    else if(currect_cell==5){
         BOX1.css("transform", "translateX(200vw)")
         BOX2.css("transform", "translateX(200vw)")
         BOX3.css("transform", "translateX(200vw)")
@@ -62,7 +64,7 @@ const changeCarouselTextBox=(n)=>{
         BOX5.css("transform", "translateX(0vw)")
         BOX6.css("transform", "translateX(200vw)")
     }
-    else if(currectCell==6){
+    else if(currect_cell==6){
         BOX1.css("transform", "translateX(200vw)")
         BOX2.css("transform", "translateX(200vw)")
         BOX3.css("transform", "translateX(200vw)")
@@ -72,6 +74,69 @@ const changeCarouselTextBox=(n)=>{
     }
 }
 
+const changeCompanyTextBox=(n,condition)=>{
+    const LOGO1 = $(".company__logos_imgs.n1")
+    const LOGO2 = $(".company__logos_imgs.n2")
+    const LOGO3 = $(".company__logos_imgs.n3")
+    const LOGO4 = $(".company__logos_imgs.n4")
+    const BOX1 = $(".company__box_1")
+    const BOX2 = $(".company__box_2")
+    const BOX3 = $(".company__box_3")
+    const BOX4 = $(".company__box_4")
+    if(!condition){
+        currect_company_box += n
+        if(currect_company_box==5){
+            currect_company_box=1
+        }
+        else if(currect_company_box==0){
+            currect_company_box=4
+        }
+    }
+    else{
+        currect_company_box=n
+    }
+    
+    if(currect_company_box==1){
+        LOGO1.addClass("active")
+        LOGO2.removeClass("active")
+        LOGO3.removeClass("active")
+        LOGO4.removeClass("active")
+        BOX1.addClass("active")
+        BOX2.removeClass("active")
+        BOX3.removeClass("active")
+        BOX4.removeClass("active")
+    }
+    else if(currect_company_box==2){
+        LOGO1.removeClass("active")
+        LOGO2.addClass("active")
+        LOGO3.removeClass("active")
+        LOGO4.removeClass("active")
+        BOX1.removeClass("active")
+        BOX2.addClass("active")
+        BOX3.removeClass("active")
+        BOX4.removeClass("active")
+    }
+    else if(currect_company_box==3){
+        LOGO1.removeClass("active")
+        LOGO2.removeClass("active")
+        LOGO3.addClass("active")
+        LOGO4.removeClass("active")
+        BOX1.removeClass("active")
+        BOX2.removeClass("active")
+        BOX3.addClass("active")
+        BOX4.removeClass("active")
+    }
+    else if(currect_company_box==4){
+        LOGO1.removeClass("active")
+        LOGO2.removeClass("active")
+        LOGO3.removeClass("active")
+        LOGO4.addClass("active")
+        BOX1.removeClass("active")
+        BOX2.removeClass("active")
+        BOX3.removeClass("active")
+        BOX4.addClass("active")
+    }
+}
 
 document.addEventListener("DOMContentLoaded",()=>{
     const HEADER_ICON = $(".header__icon")
@@ -81,17 +146,44 @@ document.addEventListener("DOMContentLoaded",()=>{
         HEADER_ICON.toggleClass("active")
     })
     
-    const PREVBTN = $('.previous-button')
-    PREVBTN.on("click", function() {
+    const PREVBTN_CAROUSEL = $('.previous-button')
+    PREVBTN_CAROUSEL.on("click", function() {
         selectedIndex--
         rotateCarousel()
         changeCarouselTextBox(-1)
     })
 
-    const NEXTBTN = $('.next-button')
-    NEXTBTN.on("click", function() {
+    const NEXTBTN_CAROUSEL = $('.next-button')
+    NEXTBTN_CAROUSEL.on("click", function() {
         selectedIndex++
         rotateCarousel()
         changeCarouselTextBox(1)
+    })
+
+    const PREVBTN_COMPANIES = $('.company__box_prev')
+    PREVBTN_COMPANIES.on("click", function() {
+        changeCompanyTextBox(-1,false)
+    })
+
+    const NEXTBTN_COMPANIES = $('.company__box_next')
+    NEXTBTN_COMPANIES.on("click", function() {
+        changeCompanyTextBox(1,false)
+    })
+
+    const LOGO1 = $('.company__logos_imgs.n1')
+    LOGO1.on("click", function() {
+        changeCompanyTextBox(1,true)
+    })
+    const LOGO2 = $('.company__logos_imgs.n2')
+    LOGO2.on("click", function() {
+        changeCompanyTextBox(2,true)
+    })
+    const LOGO3 = $('.company__logos_imgs.n3')
+    LOGO3.on("click", function() {
+        changeCompanyTextBox(3,true)
+    })
+    const LOGO4 = $('.company__logos_imgs.n4')
+    LOGO4.on("click", function() {
+        changeCompanyTextBox(4,true)
     })
 })

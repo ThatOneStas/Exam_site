@@ -233,6 +233,8 @@ body {
 .starter__box_title_1 {
     font-family: 'Proxima Nova Condensed';
     color: black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: whitesmoke;
     line-height: 1;
     margin: 160px 0px 0px 0px;
     letter-spacing: 0em;
@@ -245,6 +247,8 @@ body {
 .starter__box_title_2 {
     font-family: 'Proxima Nova Condensed';
     color: black;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: whitesmoke;
     line-height: 1;
     margin: 0px 0px 20px 0px;
     letter-spacing: 0em;
@@ -289,7 +293,7 @@ body {
     opacity: 0;
     position: absolute;
     top: -6px;
-    left: -80px;
+    left: -130px;
     width: 440px;
     height: 240px;
     background-color: #3d95ae;
@@ -532,6 +536,117 @@ body {
 .carousel__cell:nth-child(4) { transform: rotateY(180deg) translateZ(268px); }
 .carousel__cell:nth-child(5) { transform: rotateY(240deg) translateZ(268px); }
 .carousel__cell:nth-child(6) { transform: rotateY(300deg) translateZ(268px); }
+
+
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.company {
+    height: 740px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(188,188,188);
+    background: linear-gradient(90deg, rgb(188, 188, 188) 0%, rgba(215,215,215,1) 50%, rgb(188, 188, 188) 100%);
+}
+
+.company__logos {
+    width: 100%;
+    height: 26%;
+    padding: 0px 5% 0px 5%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company__logos_imgs {
+    user-select: none;
+    cursor: pointer;
+    font-family: 'Proxima Nova Condensed';
+    color: #CCC;
+    line-height: 1;
+    margin: 00px 0px 0px 0px;
+    letter-spacing: 0em;
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: rgba(0,255,208,1) 0px 0px 70px;
+    filter: grayscale(100);
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.company__logos_imgs.n1.active {
+    color: rgb(0, 255, 119);
+    text-shadow: rgb(0, 255, 119) 0px 0px 70px;
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.company__logos_imgs.n2.active {
+    color: rgb(255, 225, 0);
+    text-shadow: rgb(255, 225, 0) 0px 0px 70px;
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.company__logos_imgs.n3.active {
+    color: rgb(255, 0, 0);
+    text-shadow: rgb(255, 0, 0) 0px 0px 70px;
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.company__logos_imgs.n4.active {
+    color: rgb(0, 110, 255);
+    text-shadow: rgb(0, 110, 255) 0px 0px 70px;
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.company__box {
+    width: 100%;
+    height: 74%;
+    padding: 30px 5% 0px 5%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.company__box_prev {
+    width: 60px;
+    height: 60px;
+    padding: 7px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+.company__box_next {
+    width: 60px;
+    height: 60px;
+    padding: 7px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+.company__box_1,.company__box_2,.company__box_3,.company__box_4 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 30px 2% 0px 2%;
+    opacity: 0;
+    transition: opacity 22s;
+}
+
+.company__box_1.active,.company__box_2.active,.company__box_3.active,.company__box_4.active {
+    display: block;
+    opacity: 1;
+}
 
 
 /* --------------------------------------------------------------------------- */
