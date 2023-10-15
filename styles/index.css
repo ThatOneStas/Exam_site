@@ -578,6 +578,14 @@ body {
     transition: 0.2s;
 }
 
+.company__logos_line {
+    border-radius: 5px;
+    width: 3px;
+    height: 80%;
+    background-color: rgb(188,188,188);
+    opacity: 0.6;
+}
+
 .company__logos_imgs.n1.active {
     color: rgb(0, 255, 119);
     text-shadow: rgb(0, 255, 119) 0px 0px 70px;
@@ -638,9 +646,8 @@ body {
     display: none;
     width: 100%;
     height: 100%;
-    padding: 30px 2% 0px 2%;
+    position: relative;
     opacity: 0;
-    transition: opacity 22s;
 }
 
 .company__box_1.active,.company__box_2.active,.company__box_3.active,.company__box_4.active {
@@ -648,6 +655,78 @@ body {
     opacity: 1;
 }
 
+/* ------------------------------ */
+
+.company__box_1_img,.company__box_3_img {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    left: 3%;
+    top: 40px;
+}
+
+.company__box_2_img,.company__box_4_img {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    right: 3%;
+    top: 40px;
+}
+
+.company__box_4_img {
+    top: 80px;
+    height: 300px;
+}
+
+.company__box_1_text,.company__box_3_text {
+    position: absolute;
+    width: 45%;
+    right: 7%;
+    top: 40px;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.company__box_2_text,.company__box_4_text {
+    position: absolute;
+    width: 45%;
+    left: 7%;
+    top: 40px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.company__box_1_text_title,.company__box_3_text_title,.company__box_2_text_title,.company__box_4_text_title {
+    font-family: 'Montserrat';
+    color: black;
+    margin: 0px 0px 0px 0px;
+    letter-spacing: 0.1em;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.company__box_1_text_sub_title,.company__box_3_text_sub_title,.company__box_2_text_sub_title,.company__box_4_text_sub_title {
+    font-family: 'Montserrat';
+    color: black;
+    margin: 0px 0px 30px 0px;
+    letter-spacing: 0.1em;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.company__box_1_text_text,.company__box_3_text_text,.company__box_2_text_text,.company__box_4_text_text {
+    width: 400px;
+    font-family: 'Roboto';
+    color: black;
+    margin: 0px 0px 0px 0px;
+    letter-spacing: 0.1em;
+    font-size: 20px;
+    font-weight: 400;
+}
 
 /* --------------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------- */
