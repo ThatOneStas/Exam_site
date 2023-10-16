@@ -74,70 +74,6 @@ const changeCarouselTextBox=(n)=>{
     }
 }
 
-const changeCompanyTextBox=(n,condition)=>{
-    const LOGO1 = $(".company__logos_imgs.n1")
-    const LOGO2 = $(".company__logos_imgs.n2")
-    const LOGO3 = $(".company__logos_imgs.n3")
-    const LOGO4 = $(".company__logos_imgs.n4")
-    const BOX1 = $(".company__box_1")
-    const BOX2 = $(".company__box_2")
-    const BOX3 = $(".company__box_3")
-    const BOX4 = $(".company__box_4")
-    if(!condition){
-        currect_company_box += n
-        if(currect_company_box==5){
-            currect_company_box=1
-        }
-        else if(currect_company_box==0){
-            currect_company_box=4
-        }
-    }
-    else{
-        currect_company_box=n
-    }
-    
-    if(currect_company_box==1){
-        LOGO1.addClass("active")
-        LOGO2.removeClass("active")
-        LOGO3.removeClass("active")
-        LOGO4.removeClass("active")
-        BOX1.addClass("active")
-        BOX2.removeClass("active")
-        BOX3.removeClass("active")
-        BOX4.removeClass("active")
-    }
-    else if(currect_company_box==2){
-        LOGO1.removeClass("active")
-        LOGO2.addClass("active")
-        LOGO3.removeClass("active")
-        LOGO4.removeClass("active")
-        BOX1.removeClass("active")
-        BOX2.addClass("active")
-        BOX3.removeClass("active")
-        BOX4.removeClass("active")
-    }
-    else if(currect_company_box==3){
-        LOGO1.removeClass("active")
-        LOGO2.removeClass("active")
-        LOGO3.addClass("active")
-        LOGO4.removeClass("active")
-        BOX1.removeClass("active")
-        BOX2.removeClass("active")
-        BOX3.addClass("active")
-        BOX4.removeClass("active")
-    }
-    else if(currect_company_box==4){
-        LOGO1.removeClass("active")
-        LOGO2.removeClass("active")
-        LOGO3.removeClass("active")
-        LOGO4.addClass("active")
-        BOX1.removeClass("active")
-        BOX2.removeClass("active")
-        BOX3.removeClass("active")
-        BOX4.addClass("active")
-    }
-}
-
 document.addEventListener("DOMContentLoaded",()=>{
     const HEADER_ICON = $(".header__icon")
     HEADER_ICON.on("click",()=>{
@@ -158,32 +94,5 @@ document.addEventListener("DOMContentLoaded",()=>{
         selectedIndex++
         rotateCarousel()
         changeCarouselTextBox(1)
-    })
-
-    const PREVBTN_COMPANIES = $('.company__box_prev')
-    PREVBTN_COMPANIES.on("click", function() {
-        changeCompanyTextBox(-1,false)
-    })
-
-    const NEXTBTN_COMPANIES = $('.company__box_next')
-    NEXTBTN_COMPANIES.on("click", function() {
-        changeCompanyTextBox(1,false)
-    })
-
-    const LOGO1 = $('.company__logos_imgs.n1')
-    LOGO1.on("click", function() {
-        changeCompanyTextBox(1,true)
-    })
-    const LOGO2 = $('.company__logos_imgs.n2')
-    LOGO2.on("click", function() {
-        changeCompanyTextBox(2,true)
-    })
-    const LOGO3 = $('.company__logos_imgs.n3')
-    LOGO3.on("click", function() {
-        changeCompanyTextBox(3,true)
-    })
-    const LOGO4 = $('.company__logos_imgs.n4')
-    LOGO4.on("click", function() {
-        changeCompanyTextBox(4,true)
     })
 })
