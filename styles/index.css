@@ -476,6 +476,8 @@ body {
 }
 
 .main__carousel_btns_box .previous-button {
+    width: 25px;
+    height: 25px;
     position: absolute;
     left: 0px;
     padding: 7px;
@@ -485,6 +487,8 @@ body {
 }
 
 .main__carousel_btns_box .next-button {
+    width: 25px;
+    height: 25px;
     position: absolute;
     right: 0px;
     padding: 7px;
@@ -567,45 +571,68 @@ body {
     background-color: whitesmoke;
 }
 
-.company__bg_text {
+.company__bg_text.r {
+    left: 5%;
     position: absolute;
+}
+
+.company__bg_text.c {
+    right: 5%;
+    position: absolute;
+}
+
+.company__bg_text.d {
+    left: 5%;
+    position: absolute;
+}
+
+.company__bg_text.s {
+    right: 5%;
+    position: absolute;
+}
+
+.company__bg_text_r,.company__bg_text_c,.company__bg_text_d,.company__bg_text_s {
     user-select: none; 
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: transparent;
     font-family: 'Proxima Nova Condensed';
+    margin: 0px;
     letter-spacing: 0.0em;
-    font-size: 14em;
+    font-size: 8em;
     font-weight: 900;
     opacity: 0.8;
 }
 
-.company__bg_text.r {
+.company__bg_text_r {
     -webkit-text-stroke-color: rgb(215, 215, 215);
     letter-spacing: 0.25em;
 }
-.company__bg_text.c {
+.company__bg_text_c {
     -webkit-text-stroke-color: #CCC;
     letter-spacing: 0.1em;
 }
-.company__bg_text.d {
+.company__bg_text_d {
     -webkit-text-stroke-color: rgb(215, 215, 215);
     letter-spacing: 0.5em;
 }
-.company__bg_text.s {
+.company__bg_text_s {
     -webkit-text-stroke-color: #CCC;
     letter-spacing: 0.35em;
 }
 
-.company__bg_img.r {
+.company__bg_img_r {
+    right: 5%;
     position: absolute;
     width: 550px;
     height: 350px;
+    -webkit-transform: scale(-1, 1);
     opacity: 0.5;
 }
 
-.company__bg_img.c {
+.company__bg_img_c {
+    left: 5%;
     position: absolute;
     width: 550px;
     height: 320px;
@@ -613,21 +640,104 @@ body {
     opacity: 0.5;
 }
 
-.company__bg_img.d {
+.company__bg_img_d {
+    right: 5%;
     position: absolute;
     width: 550px;
     height: 350px;
-    -webkit-transform: scale(-1, 1);
     opacity: 0.5;
 }
 
-.company__bg_img.s {
+.company__bg_img_s {
+    left: 5%;
     position: absolute;
     width: 550px;
     height: 260px;
     opacity: 0.5;
 }
 
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+
+.slider {
+    height: 300px;
+    position: relative;
+    padding: 0px 7%;
+    padding-top: 50px;
+}
+
+.slider__item {
+    opacity: 0.5;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.slider__item.slick-center {
+    opacity: 1;
+}
+
+.slider__item_img {
+    user-select: none;
+    width: 340px;
+    height: 220px;
+}
+
+.slider .slick-track {
+    overflow: hidden;
+    display: flex;
+}
+
+.slider .slick-arrow {
+    top: 50%;
+    margin: -17.5px 0px 0px 0px;
+    z-index: 10;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border: none;
+    font-size: 0;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 5%;
+    background: url("https://cdn-icons-png.flaticon.com/512/1/1960.png") 0 0 / 100% no-repeat;
+    rotate: -180deg;
+
+}
+
+.slider .slick-arrow.slick-next {
+    right: 5%;
+    background: url("https://cdn-icons-png.flaticon.com/512/1/1960.png") 0 0 / 100% no-repeat;
+}
+
+.slider .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider .slick-dots li {
+    list-style: none;
+}
+
+.slider .slick-dots button {
+    font-size: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 0px;
+    background-color: black;
+    cursor: pointer;
+    margin: 0px 5px;
+    border: none;
+    transition: 0.4s;
+}
+
+.slider .slick-dots li.slick-active button {
+    background-color: transparent;
+    border: 1px solid black;
+}
 
 /* --------------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------- */
@@ -754,10 +864,65 @@ body {
 .form__slider{
     width: 50%;
     height: 100%;
-    padding: 40px 5% 40px 5%;
+    padding: 0px 5%;
     box-sizing: border-box;
     background-color: black;
     background: rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.form__slider .slick-track {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 30px;
+}
+
+.form__slider_item {
+    user-select: none;
+    font-family: 'Proxima Nova Condensed';
+    color: whitesmoke;
+    line-height: 1;
+    letter-spacing: 0em;
+    font-size: 140px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0px;
+    text-align: center;
+}
+
+.form__slider .slick-dots {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.form__slider .slick-dots li {
+    list-style: none;
+}
+
+.form__slider .slick-dots button {
+    font-size: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 0px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    margin: 0px 5px;
+    border: none;
+    transition: 0.2s;
+}
+
+.form__slider .slick-dots li.slick-active button {
+    background-color: transparent;
+    border: 1px solid whitesmoke;
 }
 
 /* --------------------------------------------------------------------------- */

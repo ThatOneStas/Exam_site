@@ -97,4 +97,36 @@ document.addEventListener("DOMContentLoaded",()=>{
     })
 
     const SLIDER_PARTNERS = $(".form__slider")
+    SLIDER_PARTNERS.slick({
+        arrows: false,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplaySpeed: 2000,
+        dots: true,
+        fade: true,
+        adaptiveHeight: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        draggeble: false,
+        swipe: false
+    })
+
+    const SLIDER_CARS = $(".slider")
+    SLIDER_CARS.slick({
+        arrows: true,
+        dots: true,
+        adaptiveHeight: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        speed: 800,
+        easing: "ease",
+        initialSlide: 0,
+        touchTreshhold: 10,
+        waitForAnimate: true,
+        centerMode: true,
+        variableWidth: false,
+    })
 })
