@@ -297,10 +297,10 @@ body {
     width: 440px;
     height: 240px;
     background-color: #3d95ae;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
+    border-left: 40px solid;
+    border-right: 40px solid;
+    border-top: 20px solid;
+    border-bottom: 20px solid;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
