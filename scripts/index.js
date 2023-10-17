@@ -95,4 +95,6 @@ document.addEventListener("DOMContentLoaded",()=>{
         rotateCarousel()
         changeCarouselTextBox(1)
     })
+
+    const SLIDER_PARTNERS = $(".form__slider")
 })

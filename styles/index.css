@@ -598,6 +598,37 @@ body {
     letter-spacing: 0.35em;
 }
 
+.company__bg_img.r {
+    position: absolute;
+    width: 550px;
+    height: 350px;
+    opacity: 0.5;
+}
+
+.company__bg_img.c {
+    position: absolute;
+    width: 550px;
+    height: 320px;
+    -webkit-transform: scale(-1, 1);
+    opacity: 0.5;
+}
+
+.company__bg_img.d {
+    position: absolute;
+    width: 550px;
+    height: 350px;
+    -webkit-transform: scale(-1, 1);
+    opacity: 0.5;
+}
+
+.company__bg_img.s {
+    position: absolute;
+    width: 550px;
+    height: 260px;
+    opacity: 0.5;
+}
+
+
 /* --------------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------- */
 
@@ -636,14 +667,14 @@ body {
 
 /* ------------------------------ */
 
-.form__box1{
+.form__box {
     width: 50%;
     height: 100%;
     padding: 40px 5% 0px 5%;
     box-sizing: border-box;
 }
 
-.form__title {
+.form__box_title {
     font-family: 'Montserrat';
     color: whitesmoke;
     margin: 0px 0px 30px 0px;
@@ -652,7 +683,7 @@ body {
     font-weight: 200;
 }
 
-.form__sub_title {
+.form__box_sub_title {
     font-family: 'Roboto';
     color: whitesmoke;
     margin: 0px;
@@ -663,13 +694,13 @@ body {
     opacity: 0.8;
 }
 
-.form__input {
+.form__box_input {
     user-select: none; 
     padding-top: 50px;
     width: 100%;
 }
 
-.form__input_box {
+.form__box_input_box {
     width: 100%;
     margin-bottom: 80px;
     display: grid;
@@ -678,7 +709,7 @@ body {
     row-gap: 30px;
 }
 
-.form__input_first_name,.form__input_second_name,.form__input_phone,.form__input_select {
+.form__box_input_first_name,.form__box_input_second_name,.form__box_input_phone,.form__box_input_select {
     font-family: 'Montserrat';
     font-size: 18px;
     width: 180px;
@@ -687,11 +718,11 @@ body {
     background: rgba(255, 255, 255, 0.8);
 }
 
-.form__input_select:hover {
+.form__box_input_select:hover {
     cursor: pointer;
 }
 
-.form__input_submit {
+.form__box_input_submit {
     font-family: 'Montserrat';
     font-size: 28px;
     width: 340px;
@@ -699,7 +730,7 @@ body {
     border: 0px;
 }
 
-.form__input_submit {
+.form__box_input_submit {
     width: 300px;
     color: #CCC;
     border: 3px solid #195769;
@@ -711,7 +742,7 @@ body {
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
 }
-.form__input_submit:hover {
+.form__box_input_submit:hover {
     background-position: 300%;
     border-color: #307a8e;
     color: #307a8e;
@@ -720,10 +751,10 @@ body {
 
 /* ------------------------------ */
 
-.form__box2{
+.form__slider{
     width: 50%;
     height: 100%;
-    padding: 40px 5% 0px 5%;
+    padding: 40px 5% 40px 5%;
     box-sizing: border-box;
     background-color: black;
     background: rgba(0, 0, 0, 0.4);
