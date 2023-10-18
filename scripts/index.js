@@ -74,6 +74,12 @@ const changeCarouselTextBox=(n)=>{
     }
 }
 
+const getUserFormFData=(selector)=>{
+    const TARGET = $(selector)
+     const VALUE = TARGET.val()
+    return VALUE
+}
+
 document.addEventListener("DOMContentLoaded",()=>{
     const HEADER_ICON = $(".header__icon")
     HEADER_ICON.on("click",()=>{
@@ -99,18 +105,18 @@ document.addEventListener("DOMContentLoaded",()=>{
     const SLIDER_PARTNERS = $(".form__slider")
     SLIDER_PARTNERS.slick({
         arrows: false,
-        autoplay: true,
+        dots: true,
+        adaptiveHeight: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplaySpeed: 2000,
-        dots: true,
+        infinite: true,
         fade: true,
-        adaptiveHeight: true,
-        pauseOnFocus: false,
-        pauseOnHover: false,
+        speed: 800,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
         pauseOnDotsHover: false,
-        draggeble: false,
-        swipe: false
+        pauseOnFocus: false,
     })
 
     const SLIDER_CARS = $(".slider")
@@ -128,5 +134,15 @@ document.addEventListener("DOMContentLoaded",()=>{
         waitForAnimate: true,
         centerMode: true,
         variableWidth: false,
+    })
+
+    const FORM = $(".form")
+    FORM.on("submit",(e)=>{
+        e.preventDefault()
+        first_name = getUserFormFData(".form__box_input_first_name")
+        second_name = getUserFormFData(".form__box_input_second_name")
+        phone_number = getUserFormFData(".form__box_input_phone")
+        selected_company = getUserFormFData(".form__box_input_select")
+        console.log(`${first_name} - ${second_name} - ${phone_number}, ${selected_company}`)
     })
 })

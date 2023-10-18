@@ -301,6 +301,8 @@ body {
     border-right: 40px solid;
     border-top: 20px solid;
     border-bottom: 20px solid;
+    border-color: rgb(0, 0, 0, 0.9);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
@@ -660,9 +662,10 @@ body {
 /* --------------------------------------------------------------------------- */
 
 .slider {
-    height: 300px;
+    height: 340px;
     position: relative;
     padding: 0px 7%;
+    box-sizing: border-box;
     padding-top: 50px;
 }
 
@@ -864,22 +867,33 @@ body {
 .form__slider{
     width: 50%;
     height: 100%;
-    padding: 0px 5%;
+    padding: 40px 5%;
     box-sizing: border-box;
     background-color: black;
     background: rgba(0, 0, 0, 0.4);
     position: relative;
+    min-width: 0;
+}
+
+.form__slider .slick-list {
+    height: 100%;
 }
 
 .form__slider .slick-track {
+    height: 100%;
     overflow: hidden;
     display: flex;
-    align-items: flex-start;
-    position: absolute;
-    top: 30px;
 }
 
 .form__slider_item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.form__slider_item_logo {
     user-select: none;
     font-family: 'Proxima Nova Condensed';
     color: whitesmoke;
@@ -893,13 +907,14 @@ body {
 }
 
 .form__slider .slick-dots {
-    width: 80%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0px;
-    padding: 0px;
     position: absolute;
+    left: 0px;
     bottom: 30px;
 }
 
