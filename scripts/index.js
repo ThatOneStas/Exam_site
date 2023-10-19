@@ -84,8 +84,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     const HEADER_ICON = $(".header__icon")
     HEADER_ICON.on("click",()=>{
         const ICON_NAV_BOX = $(".header__nav_box")
+        const BODY = 
         ICON_NAV_BOX.toggleClass("active")
         HEADER_ICON.toggleClass("active")
+        $("body").toggleClass("active_menu")
     })
     
     const PREVBTN_CAROUSEL = $('.previous-button')
@@ -119,7 +121,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         pauseOnFocus: false,
     })
 
-    const SLIDER_CARS = $(".slider")
+    const SLIDER_CARS = $(".cars")
     SLIDER_CARS.slick({
         arrows: true,
         dots: true,
@@ -143,6 +145,12 @@ document.addEventListener("DOMContentLoaded",()=>{
         second_name = getUserFormFData(".form__box_input_second_name")
         phone_number = getUserFormFData(".form__box_input_phone")
         selected_company = getUserFormFData(".form__box_input_select")
-        console.log(`${first_name} - ${second_name} - ${phone_number}, ${selected_company}`)
+        user_form_data = {
+            first_name,
+            second_name,
+            phone_number,
+            selected_company
+        }
+        console.log(user_form_data)
     })
 })
