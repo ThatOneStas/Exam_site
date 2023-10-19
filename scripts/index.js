@@ -83,7 +83,7 @@ const getUserFormFData=(selector)=>{
 document.addEventListener("DOMContentLoaded",()=>{
     const HEADER_ICON = $(".header__icon")
     HEADER_ICON.on("click",()=>{
-        const ICON_NAV_BOX = $(".header__nav_box")
+        const ICON_NAV_BOX = $(".header__menu.model")
         const BODY = 
         ICON_NAV_BOX.toggleClass("active")
         HEADER_ICON.toggleClass("active")
