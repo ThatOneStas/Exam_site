@@ -153,4 +153,23 @@ document.addEventListener("DOMContentLoaded",()=>{
         }
         console.log(user_form_data)
     })
+
+    const SCREEN_REQ = window.matchMedia( "(max-width: 391px)" )
+    if(SCREEN_REQ.matches){
+        SLIDER_CARS.slick({
+            arrows: true,
+            dots: true,
+            adaptiveHeight: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            speed: 800,
+            easing: "ease",
+            initialSlide: 0,
+            touchTreshhold: 10,
+            waitForAnimate: true,
+            centerMode: true,
+            variableWidth: false,
+    })
+    }
 })
