@@ -133,11 +133,13 @@ body {
     justify-content: end;
     transform: translateX(200vw);
     transition: 0.2s;
+    visibility: hidden;
 }
 
 .header__menu.model.active {
     transform: translateX(0vw);
     right: 0px;
+    visibility: visible;
 }
 body.active_menu {
     overflow-y: hidden;
@@ -236,13 +238,13 @@ body.active_menu {
     margin-left: 0.16em;
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: whitesmoke;
     font-family: 'Proxima Nova Condensed';
     letter-spacing: 0.2em;
-    font-size: 24em;
+    font-size: 30em;
     font-weight: 900;
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 /* ------------------------------ */
